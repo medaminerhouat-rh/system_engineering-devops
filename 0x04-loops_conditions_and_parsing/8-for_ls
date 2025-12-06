@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script lists files, showing only the part of the filename after the first dash
+for FILE in *; do
+  if [ -f "$FILE" ]; then
+    echo "$FILE" | cut -d '-' -f 2-
+  fi
+done
